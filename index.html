@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <header class="fixed-top">
+        <div class="bg-light collapse" id="header-hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 offset-md-1"></div>
+                        <h4>Навигация</h4>
+                        <!-- для мобильных устройств - взял 768 -->
+                        <ul class="nav list-group list-group-horizontal-md ps-4"> 
+                            <li class="nav-item">
+                              <a href="#" class="btn btn-secondary" role="button" tabindex="-1">Приветствие</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#projects" class="btn btn-secondary" role="button" tabindex="-1">Мы и наши проекты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#service" class="btn btn-secondary" role="button" tabindex="-1">Наши услуги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#end" class="btn btn-secondary" role="button" tabindex="-1">Начать работать с нами</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar navbar-light bg-light shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand fw-bold">Сайт-портфолио</a>
+                <button type="button" class="navbar-toggler collapsed" 
+                data-bs-toggle="collapse" data-bs-target="#header-hidden">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+            </div>
+        </div>
+    </header>
+
+    <div class="jumbotron text-center text-white" id="j1"> 
+        <div class="container"> 
+            <div class="pb-5">
+                <h1 class="mb-0">Наше портфолио</h1>
+                <!-- Я если честно не понял - есть в задании адаптация 
+                    по размеру текста или нет, ну на всякий случай поколдовал -->
+                <p class="text fs-5 fst-italic">Самое крутое портфолио в мире (по оценке автора)</p>
+            </div>
+            <a name="projects" href="#projects" class="btn btn-danger fs-md-4 fs-6">Наши проекты</a> 
+        </div> 
+    </div>
+
+    <div class="jumbotron text-center py-1" id="j3">
+        <div class="container my-5 w-75">
+            <div class="pb-5">
+                <h4>Множество крутых проектов для вас и вашей команды!</h4>
+                <p class="text">Отличные простые и стильные проекты, 
+                    которые подойдут как для небольшого сайта, 
+                    так и для крупной компании!</p>
+            </div>
+            <a href="#end" class="btn btn-secondary fs-6" role="button" tabindex="-1">Начать работать с нами</a>
+        </div>
+    </div>
+
+    <div class="container border-top pb-5 mb-5">
+        <h4 class="text-center py-5">Наши проекты</h4>
+        <div class="d-flex flex-wrap justify-content-between"> 
+            <div class="card mb-4 shadow-sm col-md-3 col-12"> 
+                <img src="img/calc.jpg" alt="Calc" class="card-img-top">
+                <div class="card-body"> 
+                    <p class="card-text">
+                        <p><b>Калькулятор с интерфейсом</b></p>
+                        Работает точно также, как старые модели конопочных калькуляторов и встроенный в Windows калькулятор
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-window1">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm col-md-3 col-12"> 
+                <img src="img/voice.jpg" alt="Voice" class="card-img-top">
+                <div class="card-body"> 
+                    <p class="card-text">
+                        <p><b>Голосовой помощник</b></p>
+                        Программа с голосовым управлением. Поддержка русского и английского языков.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-window2">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm col-md-3 col-12"> 
+                <img src="img/tel.jpg" alt="F" class="card-img-top">
+                <div class="card-body"> 
+                    <p class="card-text">
+                        <p><b>Погодный бот</b></p>
+                        Информирует о погоде на текущий день. Можно запросить погоду в своем и другом регионе.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-window3">Подробнее</button>
+                    </div>
+                    <a name="service"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-window1" tabindex="-1" role="dialog" aria-labelledby="modal-window-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-window-label">Калькулятор</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Работает точно также, как старые модели конопочных калькуляторов и встроенный в Windows калькулятор</p>
+                <p>(Т.е. поддерживает любые последовательные вычисления, изменение операции в процессе выполнения,
+                    но не понимает приоритет операций - вычисляет только последовательно.
+                    Например, если последовательно нажать на кнопки 2 + 2 * 2 то получится 8, а не 6)</p>
+                <p>Реализована возможность вычисления факториала, корня произвольного показателя, произвольной степени, остатка от деления.</p>
+                <p>Корень и степень вычисляются следующим образом - вводите основание, нажимаете кнопку корня, вводите показатель.</p>
+                <p>По интерфейсу - попытался сделать закос на калькулятор айфона))</p>
+                <p>Обязательно запускайте именно из проекта - использовал свои иконки для подписей кнопок,
+                    т.к. в библиотеке kivymd не нашел подходящих (возможно плохо искал).</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-window2" tabindex="-1" role="dialog" aria-labelledby="modal-window-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-window-label">Голосовой помощник</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Программа работает с несколькими изображениями - 2 с текстом на английском, 2 - на русском
+                Программа сама определяет язык в файле и корректно считывает и записывает текст.
+                Программа может говорить и понимать речь на 2-х языках - русском и английском
+                (хотя речь компьютера на английском понять, мягко говоря, непросто).
+                Перед началом работы нужно выбрать язык произнеся команду "русский" ("russian") или английский ("english")
+                Правда не очень хорошо распознает названия файлов, и команды на английском,
+                может потребоваться несколько попыток (постарайтесь говорить с правильным английским произношением,
+                тогда распознает, мне пришлось попрактиковаться какое-то время, давно практики не было).</p>
+                
+                <p>После выбора языка нужно осуществить выбор картинки для считывания текста,
+                произнеся команду "выбрать картинку" ("choose image"), далее "записать текст" ("write text")
+                Программа сама сформирует файл с именем картинки и расширением txt и запомнит его как текущий файл для чтения.
+                Затем, по команде "прочитать текст" ("read text") текст из файла будет выведен в консоль</p>
+                
+                <p>Общий список доступных команд:
+                1. "список картинок" / "pictures list" - выводит список картинок, доступных для обработки
+                2. "показать команды" / "show commands" - выводит список доступных команд в зависимости от выбранного языка
+                3. "выбрать картинку" / "choose image" - выбирает каринку для считывания,
+                   название картинки говорите БЕЗ РАСШИРЕНИЯ .PNG
+                4. "записать текст" / "write text" - считывает и записывает текст с выбранной картинки в файл,
+                   имя файла - такое же, как имя картинки
+                5. "выбрать файл" / "choose file"  - выбирает файл для считывания текста и вывода текста,
+                   по умолчанию запоминается последний файл, использовавшийся для записи текста с картинки,
+                   с помощью данной команды можно выбрать любой другой
+                6. "прочитать текст" / "read text" - выводит текст, записанный в выбранный на предыдущем этапе файл.</p>
+                
+                <p>Пользуйтесь тем языком, который выбрали на первом шаге - т.е. если выбрали английский,
+                то говорите английские команды, если русский - русские.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-window3" tabindex="-1" role="dialog" aria-labelledby="modal-window-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-window-label">Телеграм-бот</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Бот для определения погоды в указанном регионе</p>
+              <p>Используется СУБД postgresql</p>
+              <p>Каждый пользователь, запускающий бота может указать свой регион и запросить погоду на текущий момент.
+                Пользователь, при желании также имеет возможность запросить информацию о погоде в другом регионе.
+                Запросы записываются в базу данных, таким образом пользователь может просматривать историю собственных запросов.
+                Пользователь может удалять запросы из своей истории.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="jumbotron text-center text-white bg-danger py-1" id="j2">
+        <div class="container my-5">
+            <div>
+                <p class="text fs-2 mb-0" id="usl">УСЛУГИ</p>
+                <p class="text fs-1 pb-3" id="offer">Что мы предлагаем</p>
+                <div class="row justify-content-between align-items-top">
+                    <div class="block col-md-2 col-12">
+                        <p class="text_h mb-2">Готовый код</p>
+                        <p class="text_t">Можно встраивать в свои проекты</p>
+                    </div>
+                    <div class="block col-md-2 col-12">
+                        <p class="text_h mb-2">Легко переделать</p>
+                        <p class="text_t">Легкий и удобный код, который легко переписать</p>
+                    </div>
+                    <div class="block col-md-2 col-12">
+                        <p class="text_h mb-2">Помощь</p>
+                        <p class="text_t">Поддержка и помощь при работе с сервисом</p>
+                    </div>
+                    <div class="block col-md-2 col-12">
+                        <p class="text_h mb-2">Качество</p>
+                        <p class="text_t">Качественные работы по низким ценам</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Только визуальная составляющая -->
+    <div class="modal fade" id="modal-window4" tabindex="-1" role="dialog" aria-labelledby="modal-window-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-window-label">Оставьте нам ваши данные для связи</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                      <label for="InputEmail" class="form-label">Адрес эл. почты</label>
+                      <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">Мы не разглашаем ваши контактные данные кому-либо.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="InputPhone" class="form-label">Телефон</label>
+                      <input type="phone" class="form-control" id="InputPhone">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="Check">
+                      <label class="form-check-label" for="Check">Я согласен на обработку моих персональных данных</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Отправить</button>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <a name="end"></a>
+    <footer class="jumbotron text-center text-white" id="j_fut"> 
+        <div class="container"> 
+            <div class="pb-5">
+                <h1>Ваш новый веб-сайт уже рядом!</h1>
+            </div>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-window4">Оставить заявку</button>
+        </div> 
+    </footer>
+
+    <script type="text/javascript">
+        function resetValue(elem)
+        {
+        elem = document.getElementById(elem);
+        elem.value = "";
+        }
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script> 
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
